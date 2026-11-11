@@ -6,10 +6,8 @@ pipeline{
     //     }
     // }
     environment{
-        script{
             def file= readJSON file: 'package.json'
             version = file.version
-        }
     }
     stages{
         stage("build"){
