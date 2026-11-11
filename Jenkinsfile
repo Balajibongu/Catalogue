@@ -1,9 +1,10 @@
 pipeline{
-    agent{
-        label {
-            node = "AGENT-1"
-        }
-    }
+    agent any 
+    // agent{
+    //     label {
+    //         node = "AGENT-1"
+    //     }
+    // }
     environment{
         script{
             def file= readJSON file: 'package.json'
