@@ -34,7 +34,7 @@ pipeline{
                         # docker build -t catalogue:latest .
                         docker images
                         aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 832510228841.dkr.ecr.us-east-1.amazonaws.com
-                        docker build 832510228841.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
+                        docker build -t 832510228841.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest .
                         # docker rmi -f catalogue:latest
                         docker images
                         docker push 832510228841.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
