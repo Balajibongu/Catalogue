@@ -5,16 +5,15 @@ pipeline{
     //         node = "AGENT-1"
     //     }
     // }
-    environment{
-            def file= readJSON file: 'package.json'
-            version = file.version
-    }
     stages{
         stage("build"){
             steps{
-                echo "this is building space for catalogue"
-                echo "this is node version: ${version}"
-                    // sh "npm install"
+                script{
+                    def file= readJSON file: 'package.json'
+                    version = file.version
+                    echo "this is building space for catalogue"
+                    echo "this is node version: ${version}"
+                }      // sh "npm install"
             }
         }
     }
