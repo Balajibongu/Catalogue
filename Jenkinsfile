@@ -4,14 +4,13 @@ pipeline{
         label "AGENT-1"
     }
     environment{
-        
+        name = "balaji"
     }
     options{
         timeout(time: 10, unit: 'MINUTES'){
             disableConcurrentBuilds() 
         }
-    }
-   
+    } 
     stages{
         stage("read the version"){
             steps{
