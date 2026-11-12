@@ -28,7 +28,8 @@ pipeline{
         }
         stage("build"){
             steps{
-                withAWS(credentials: 'aws-credentials', region: 'us-east-1'){
+                withAWS(credentials: 'aws-credentials', region: 'us-east-1')
+                {
                     sh """
                         # docker build -t catalogue:latest .
                         # docker images
