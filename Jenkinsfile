@@ -1,5 +1,8 @@
 pipeline{
-    agent any 
+    // agent any 
+    agent{
+        label "AGENT-1"
+    }
     environment{
         
     }
@@ -8,11 +11,7 @@ pipeline{
             disableConcurrentBuilds() 
         }
     }
-    // agent{
-    //     label {
-    //         node = "AGENT-1"
-    //     }
-    // }
+   
     stages{
         stage("read the version"){
             steps{
