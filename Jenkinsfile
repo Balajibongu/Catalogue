@@ -7,9 +7,8 @@ pipeline{
         name = "balaji"
     }
     options{
-        timeout(time: 10, unit: 'MINUTES'){
-            disableConcurrentBuilds() 
-        }
+        timeout(time: 10, unit: 'MINUTES')
+        disableConcurrentBuilds() 
     } 
     stages{
         stage("read the version"){
