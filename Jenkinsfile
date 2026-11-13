@@ -26,6 +26,14 @@ pipeline{
                 sh "npm install"
             }
         }
+        stage("unit testing"){
+            steps{
+                sh "npm test"
+            }
+        }
+        stage("qualite policy"){
+            
+        }
         stage("build"){
             steps{
                 withAWS(credentials: 'aws-credentials', region: 'us-east-1')
