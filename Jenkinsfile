@@ -15,7 +15,7 @@ pipeline{
             steps{
                 script{
                     def file= readJSON file: 'package.json'
-                    version = file.version
+                    def version = file.version
                     echo "this is building space for catalogue"
                     echo "this is node version: ${version}"
                 }     
