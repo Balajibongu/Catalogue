@@ -10,7 +10,7 @@ COPY *.js ./
 
 FROM node:20-alpine
 RUN apk update && \
-    apk update --no-cache
+    apk upgrade --no-cache
 WORKDIR /opt/app
 
 COPY --from=builder /opt/app/node_modules ./node_modules
