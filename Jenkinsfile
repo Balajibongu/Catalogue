@@ -24,12 +24,16 @@ pipeline{
         }
         stage("install dependencies"){
             steps{
-                sh "npm install"
+                ansiColor('xterm'){
+                    sh "npm install"
+                }
             }
         }
         stage("unit testing"){
             steps{
-                sh "npm test"
+                ansiColor('xterm'){
+                    sh "npm test"
+                }
             }
         }
         // stage("qualite policy"){
