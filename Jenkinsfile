@@ -9,6 +9,7 @@ pipeline{
     options{
         timeout(time: 10, unit: 'MINUTES')
         disableConcurrentBuilds() 
+        ansiColor('xterm')
     } 
     stages{
         stage("read the version"){
@@ -107,6 +108,7 @@ pipeline{
             }
         }
     }
+
     post{
         always{
             echo "cleaning work space"
