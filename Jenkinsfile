@@ -100,8 +100,8 @@ pipeline{
                 sh """
                     trivy image \
                     --scanners vuln \
-                    ---severity HIGH,CRITICAL\
-                    --exit-code 1\
+                    --severity HIGH,CRITICAL \
+                    --exit-code 1 \
                     --pkg-types os \
                     832510228841.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue:latest
                 """
