@@ -40,7 +40,7 @@ pipeline{
             steps {
                 withCredentials([
                     string(
-                        credentialsId: 'github-token',
+                        credentialsId: 'GITHUB_TOKEN',
                         variable: 'GITHUB_TOKEN'
                     )
                 ])
