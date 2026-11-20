@@ -1,8 +1,8 @@
 @Library('jenkins-shared-library') _
 
-def configMap=[
-    projectname= "roboshop",
-    directory="Catalogue"
+def configMap= [
+    projectname : "roboshop",
+    directory : "Catalogue"
 ]
 
 // echo "now we are executing the catalogue"
