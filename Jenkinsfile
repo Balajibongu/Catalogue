@@ -2,7 +2,7 @@
 
 def configMap=[
     projectname= "roboshop",
-    directory="catalogue"
+    directory="Catalogue"
 ]
 
 // echo "now we are executing the catalogue"
